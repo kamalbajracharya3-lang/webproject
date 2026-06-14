@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <title>SquirtMovie</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <h1>SquirtMovie</h1>
+      <a href="index.html">Home</a>
+      <a href="trending.html">Trending</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <!-- SEARCH -->
+    <div class="search-box">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search movies, anime, dramas..."
+      />
+    </div>
+    <!-- TRENDING -->
+    <h2 class="title">🔥 Trending Now</h2>
+
+    <div class="container">
+      <!-- CARD 1 -->
+      <div class="card">
+        <img src="aot.jpg" onclick="showDetails('aot')" />
+        <h3 onclick="showDetails('aot')">Attack on Titan</h3>
+        <p>⭐ 9.1/10</p>
+        <textarea placeholder="Write comment"></textarea>
+        <!-- stopPropagation prevents card click -->
+        <button onclick="addComment(this, event)">Post</button>
+        <ul></ul>
+      </div>
+      <!-- CARD 2 -->
+      <div class="card">
+        <img src="slayer.png" onclick="showDetails('demon')" />
+        <h3 onclick="showDetails('demon')">Demon Slayer</h3>
+        <p>⭐ 8.7/10</p>
+        <textarea placeholder="Write comment"></textarea>
+        <button onclick="addComment(this, event)">Post</button>
+        <ul></ul>
+      </div>
+      <!-- CARD 3 -->
+      <div class="card">
+        <img src="wish.png" onclick="showDetails('wishes')" />
+        <h3 onclick="showDetails('wishes')">If Wishes Could Kill</h3>
+        <p>⭐ 9.0/10</p>
+        <textarea placeholder="Write comment"></textarea>
+        <button onclick="addComment(this, event)">Post</button>
+        <ul></ul>
+      </div>
+      <!-- CARD 4 -->
+      <div class="card">
+        <img src="obsession.png" onclick="showDetails('obsession')" />
+        <h3 onclick="showDetails('obsession')">Obsession</h3>
+        <p>⭐ 8.7/10</p>
+        <textarea placeholder="Write comment"></textarea>
+        <button onclick="addComment(this, event)">Post</button>
+        <ul></ul>
+      </div>
+    </div>
+    <!-- DETAILS SECTION -->
+    <div id="details" class="details-section">
+      <img
+        id="detailImg"
+        src=""
+        alt="Movie Image"
+        style="width: 300px; border-radius: 10px; margin-bottom: 20px"
+      />
+      <h2 id="detailTitle"></h2>
+      <p id="detailMeta"></p>
+      <p id="detailDesc"></p>
+      <button onclick="closeDetails()">⬅ Back</button>
+    </div>
+
+    <footer>
+      <p>© 2026 SquirtMovie | Follow us:</p>
+      <a href="#">Instagram</a> | <a href="#">Twitter</a> |
+      <a href="#">YouTube</a>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
